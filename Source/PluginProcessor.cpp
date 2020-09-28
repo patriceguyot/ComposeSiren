@@ -22,6 +22,7 @@ SirenePlugAudioProcessor::SirenePlugAudioProcessor()
                        )
 #endif
 {
+    startTimer(1);
 }
 
 SirenePlugAudioProcessor::~SirenePlugAudioProcessor()
@@ -239,6 +240,11 @@ int* SirenePlugAudioProcessor::getIntFromMidiMessage(const void * data, int size
         arr[i] = static_cast<int>(x);
     }
     return arr;
+}
+
+void SirenePlugAudioProcessor::timerCallback()
+{
+    int a = 1;
 }
 
 

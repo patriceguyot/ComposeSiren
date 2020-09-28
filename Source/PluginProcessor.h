@@ -14,7 +14,7 @@
 //==============================================================================
 /**
 */
-class SirenePlugAudioProcessor  : public juce::AudioProcessor
+class SirenePlugAudioProcessor  : public juce::AudioProcessor, private juce::Timer
 {
 public:
     //==============================================================================
@@ -57,6 +57,7 @@ public:
 
     float noteOnVel;
     int* getIntFromMidiMessage(const void* data, int size);
+    void timerCallback() override;
 
 private:
     //==============================================================================
