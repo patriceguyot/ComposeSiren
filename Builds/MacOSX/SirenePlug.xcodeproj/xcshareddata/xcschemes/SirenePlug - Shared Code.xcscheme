@@ -42,6 +42,7 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
+         BundleIdentifier = "com.juce.pluginhost"
          FilePath = "/Users/guyot/JUCE/extras/AudioPluginHost/Builds/MacOSX/build/Debug/AudioPluginHost.app">
       </PathRunnable>
    </LaunchAction>

@@ -2,8 +2,7 @@
 
 <JUCERPROJECT id="kKb8oN" name="SirenePlug" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
-              pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
-              pluginFormats="buildVST3">
+              pluginFormats="buildVST3" pluginCharacteristicsValue="pluginIsSynth">
   <MAINGROUP id="UbOsgL" name="SirenePlug">
     <GROUP id="{5D8B4C35-3DE3-3DFE-C48F-E72EDC6982BD}" name="Resources">
       <FILE id="GQdGLI" name="dataAmpS1" compile="0" resource="0" file="Resources/dataAmpS1"

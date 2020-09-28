@@ -60,6 +60,7 @@ public:
     float noteOnVel;
     int* getIntFromMidiMessage(const void* data, int size);
     void timerCallback() override;
+    MidiIn* myMidiInHandler;
 
 private:
     //==============================================================================
