@@ -5,7 +5,57 @@
               pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
               pluginFormats="buildVST3">
   <MAINGROUP id="UbOsgL" name="SirenePlug">
+    <GROUP id="{5D8B4C35-3DE3-3DFE-C48F-E72EDC6982BD}" name="Resources">
+      <FILE id="GQdGLI" name="dataAmpS1" compile="0" resource="0" file="Resources/dataAmpS1"
+            xcodeResource="1"/>
+      <FILE id="OqNCEG" name="dataAmpS3" compile="0" resource="0" file="Resources/dataAmpS3"
+            xcodeResource="1"/>
+      <FILE id="SUZXl1" name="dataAmpS4" compile="0" resource="0" file="Resources/dataAmpS4"
+            xcodeResource="1"/>
+      <FILE id="aziGls" name="dataAmpS5" compile="0" resource="0" file="Resources/dataAmpS5"
+            xcodeResource="1"/>
+      <FILE id="LuEirF" name="dataAmpS7" compile="0" resource="0" file="Resources/dataAmpS7"
+            xcodeResource="1"/>
+      <FILE id="uVPlln" name="datadureTabsS1" compile="0" resource="0" file="Resources/datadureTabsS1"
+            xcodeResource="1"/>
+      <FILE id="qLCDja" name="datadureTabsS3" compile="0" resource="0" file="Resources/datadureTabsS3"
+            xcodeResource="1"/>
+      <FILE id="CLxY48" name="datadureTabsS4" compile="0" resource="0" file="Resources/datadureTabsS4"
+            xcodeResource="1"/>
+      <FILE id="saUqjX" name="datadureTabsS5" compile="0" resource="0" file="Resources/datadureTabsS5"
+            xcodeResource="1"/>
+      <FILE id="hOajtk" name="datadureTabsS7" compile="0" resource="0" file="Resources/datadureTabsS7"
+            xcodeResource="1"/>
+      <FILE id="QuVVvc" name="dataFreqS1" compile="0" resource="0" file="Resources/dataFreqS1"
+            xcodeResource="1"/>
+      <FILE id="kJFFKq" name="dataFreqS3" compile="0" resource="0" file="Resources/dataFreqS3"
+            xcodeResource="1"/>
+      <FILE id="pzYi0o" name="dataFreqS4" compile="0" resource="0" file="Resources/dataFreqS4"
+            xcodeResource="1"/>
+      <FILE id="onvdCU" name="dataFreqS5" compile="0" resource="0" file="Resources/dataFreqS5"
+            xcodeResource="1"/>
+      <FILE id="mgkXyQ" name="dataFreqS7" compile="0" resource="0" file="Resources/dataFreqS7"
+            xcodeResource="1"/>
+      <FILE id="CZ1lsi" name="dataVectorIntervalS1" compile="0" resource="0"
+            file="Resources/dataVectorIntervalS1" xcodeResource="1"/>
+      <FILE id="mfxnhK" name="dataVectorIntervalS2" compile="0" resource="0"
+            file="Resources/dataVectorIntervalS2" xcodeResource="1"/>
+      <FILE id="xMZ6go" name="dataVectorIntervalS3" compile="0" resource="0"
+            file="Resources/dataVectorIntervalS3" xcodeResource="1"/>
+      <FILE id="u5tz8C" name="dataVectorIntervalS4" compile="0" resource="0"
+            file="Resources/dataVectorIntervalS4" xcodeResource="1"/>
+      <FILE id="aoeYJK" name="dataVectorIntervalS5" compile="0" resource="0"
+            file="Resources/dataVectorIntervalS5" xcodeResource="1"/>
+      <FILE id="h8epW9" name="dataVectorIntervalS7" compile="0" resource="0"
+            file="Resources/dataVectorIntervalS7" xcodeResource="1"/>
+    </GROUP>
     <GROUP id="{76B1EC72-F9E3-7278-73FE-DEA70DFB6843}" name="Source">
+      <FILE id="MMig42" name="CS_midiIN.h" compile="0" resource="0" file="Source/CS_midiIN.h"/>
+      <FILE id="v8Veqv" name="CS_midiIN.cpp" compile="1" resource="0" file="Source/CS_midiIN.cpp"/>
+      <FILE id="eEMcya" name="synth.h" compile="0" resource="0" file="Source/synth.h"/>
+      <FILE id="FlWeMC" name="Sirene.h" compile="0" resource="0" file="Source/Sirene.h"/>
+      <FILE id="NJ7hP8" name="synth.cpp" compile="1" resource="0" file="Source/synth.cpp"/>
+      <FILE id="e3Vu9C" name="Sirene.cpp" compile="1" resource="0" file="Source/Sirene.cpp"/>
       <FILE id="O9Z234" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="NkG4hy" name="PluginProcessor.h" compile="0" resource="0"
@@ -19,8 +69,8 @@
   <EXPORTFORMATS>
     <XCODE_MAC targetFolder="Builds/MacOSX">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug" targetName="SirenePlug"/>
-        <CONFIGURATION isDebug="0" name="Release" targetName="SirenePlug"/>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="SirenePlug" headerPath="/usr/local/Cellar/boost/1.72.0_3/include&#10;"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="SirenePlug" headerPath="/usr/local/Cellar/boost/1.72.0_3/include&#10;"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_audio_basics" path="../../../../../../JUCE/modules"/>
