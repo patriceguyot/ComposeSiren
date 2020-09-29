@@ -14,7 +14,9 @@
 //==============================================================================
 /**
 */
-class SirenePlugAudioProcessorEditor  : public juce::AudioProcessorEditor//, private juce::Slider::Listener
+class SirenePlugAudioProcessorEditor  : public juce::AudioProcessorEditor, public juce::Button::Listener
+
+//, private juce::Slider::Listener
 {
 public:
     SirenePlugAudioProcessorEditor (SirenePlugAudioProcessor&);
@@ -37,6 +39,17 @@ private:
     void sliderValueChanged (juce::Slider* slider) override;
     juce::Slider midiVolume;
      */
+    
+    void buttonClicked (juce::Button* button) override
+    {
+        if (button == &resetButton)
+        {
+            std::cout << "Reset"<<std::endl;
+
+        }
+    }
+    
+    juce::TextButton resetButton;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SirenePlugAudioProcessorEditor)
 };

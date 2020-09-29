@@ -8,7 +8,7 @@
     <key>CFBundleIconFile</key>
     <string></string>
     <key>CFBundleIdentifier</key>
-    <string>com.yourcompany.SirenePlug</string>
+    <string>com.MecaniqueVivante.SirenePlug</string>
     <key>CFBundleName</key>
     <string>SirenePlug</string>
     <key>CFBundleDisplayName</key>

@@ -30,10 +30,21 @@ SirenePlugAudioProcessorEditor::SirenePlugAudioProcessorEditor (SirenePlugAudioP
     
     midiVolume.addListener (this);
     */
+    
+    
+    resetButton.setButtonText ("Reset");
+    //resetButton.setColour(juce::Label::backgroundColourId, juce::Colours::red);
+    //resetButton.setColour(juce::Label::textColourId, juce::Colours::black);
+    addAndMakeVisible (resetButton);
+    resetButton.addListener (this);
+    
+    
 }
 
 SirenePlugAudioProcessorEditor::~SirenePlugAudioProcessorEditor()
 {
+    resetButton.removeListener (this);
+
 }
 
 //==============================================================================
@@ -44,19 +55,32 @@ void SirenePlugAudioProcessorEditor::paint (juce::Graphics& g)
 
     g.setColour (juce::Colours::white);
     g.setFont (15.0f);
-    g.drawFittedText ("Sirene plugin", 0, 0, getWidth(), 30, juce::Justification::centred, 1);}
+    g.drawFittedText ("Sirene plugin", 0, 0, getWidth(), 30, juce::Justification::centred, 1);
+    
+}
 
 
 void SirenePlugAudioProcessorEditor::resized()
 {
     
-    //midiVolume.setBounds (40, 30, 20, getHeight() - 60);
+    resetButton.setBounds (30, 30, 50, 50);
 }
 
 /*
 void SirenePlugAudioProcessorEditor::sliderValueChanged (juce::Slider* slider)
 {
     audioProcessor.noteOnVel = midiVolume.getValue();
+}
+*/
+
+/*
+void buttonClicked (juce::Button* button)
+{
+    if (button == &resetButton)
+    {
+        std::cout << "Reset"<<std::endl;
+
+    }
 }
 */
 

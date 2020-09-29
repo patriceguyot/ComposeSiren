@@ -100,11 +100,13 @@ void SirenePlugAudioProcessor::prepareToPlay (double sampleRate, int samplesPerB
 {
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
+    /*
     int totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
     std::cout << "total number of Input Channels: " << totalNumInputChannels << "\n";
     std::cout << "total nomber of Output Channels: " << totalNumOutputChannels << "\n";
+     */
 }
 
 void SirenePlugAudioProcessor::releaseResources()
@@ -166,8 +168,8 @@ void SirenePlugAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
     
     //Pat: original code of the audio plug in template
     juce::ScopedNoDenormals noDenormals;
-    auto totalNumInputChannels  = getTotalNumInputChannels();
-    auto totalNumOutputChannels = getTotalNumOutputChannels();
+    //auto totalNumInputChannels  = getTotalNumInputChannels();
+    //auto totalNumOutputChannels = getTotalNumOutputChannels();
     
     
 
@@ -177,7 +179,7 @@ void SirenePlugAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
     // This is here to avoid people getting screaming feedback
     // when they first compile a plugin, but obviously you don't need to keep
     // this code if your algorithm always overwrites all the output channels.
-    for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
+    //for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         
         //buffer.clear (i, 0, buffer.getNumSamples());
 
@@ -188,7 +190,7 @@ void SirenePlugAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
         // Alternatively, you can process the samples with the channels
         // interleaved by keeping the same state.
         
-        int channel = 0;
+        //int channel = 0;
         //for (int channel = 0; channel < totalNumOutputChannels; ++channel)
         //{
             
