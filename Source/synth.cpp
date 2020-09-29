@@ -107,17 +107,23 @@ void Synth::setVelocite(int sireneNumber, int velo){
     }
 }
 
-/*
+
 void Synth::setPan(int sireneNumber, float value){
     if(isWithSynthe){
         switch (sireneNumber) {
             case 1:PanS1=value;  break;
+            case 2:PanS2=value;  break;
+            case 3:PanS3=value;  break;
+            case 4:PanS4=value;  break;
+            case 5:PanS5=value;  break;
+            case 6:PanS6=value;  break;
+            case 7:PanS7=value;  break;
             default:
                 break;
         }
     }
 }
-*/
+
 
 void Synth::changeQualite(int qualt){
     if(isWithSynthe){

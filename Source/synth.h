@@ -62,7 +62,13 @@ public:
 private:
 
     //float volumeSynth;//1.;
-    //float PanS1;//0.25;
+    float PanS1;//0.25;
+    float PanS2;//0.75;
+    float PanS3;//0.4;
+    float PanS4;//0.6;
+    float PanS5;//0.1;
+    float PanS6;//0.9;
+    float PanS7;//0.65;
     //float Volsynthz;
     //AudioComponentDescription cd1;
     //AudioComponentDescription cdmix;
