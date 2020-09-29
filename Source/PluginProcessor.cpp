@@ -154,14 +154,13 @@ void SirenePlugAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
  
     
     float sampleS1 = 0;
-    /*
     float sampleS2 = 0;
     float sampleS3 = 0;
     float sampleS4 = 0;
     float sampleS5 = 0;
     float sampleS6 = 0;
     float sampleS7 = 0;
-     */
+    
     
     //myMidiInHandler -> timerAudio();
     
@@ -202,17 +201,16 @@ void SirenePlugAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
                 
                 // ..do something to the data...
                 sampleS1 = myMidiInHandler -> mySynth -> s1 -> calculwave();
-                /*
                 sampleS2 = myMidiInHandler -> mySynth -> s2 -> calculwave();
                 sampleS3 = myMidiInHandler -> mySynth -> s3 -> calculwave();
                 sampleS4 = myMidiInHandler -> mySynth -> s4 -> calculwave();
                 sampleS5 = myMidiInHandler -> mySynth -> s5 -> calculwave();
                 sampleS6 = myMidiInHandler -> mySynth -> s6 -> calculwave();
                 sampleS7 = myMidiInHandler -> mySynth -> s7 -> calculwave();
-                 */
+                 
                 
-                channelLeft[sample]  = sampleS1; //+ sampleS2 + sampleS3 + sampleS5;
-                channelRight[sample]  = sampleS1;
+                channelLeft[sample]  = sampleS1 + sampleS2 + sampleS3 + sampleS5 + sampleS6 + sampleS7;
+                channelRight[sample]  = channelLeft[sample];
             //}
     }
     
@@ -272,14 +270,13 @@ int* SirenePlugAudioProcessor::getIntFromMidiMessage(const void * data, int size
 void SirenePlugAudioProcessor::timerCallback()
 {
     myMidiInHandler -> mySynth -> s1 -> setnote();
-    /*
     myMidiInHandler -> mySynth -> s2 -> setnote();
     myMidiInHandler -> mySynth -> s3 -> setnote();
     myMidiInHandler -> mySynth -> s4 -> setnote();
     myMidiInHandler -> mySynth -> s5 -> setnote();
     myMidiInHandler -> mySynth -> s6 -> setnote();
     myMidiInHandler -> mySynth -> s7 -> setnote();
-     */
+     
     
 }
 
