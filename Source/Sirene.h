@@ -61,20 +61,20 @@ public:
 
     inline float calculwave(){
 
-		//cout << "Je suis la 1" << endl;
+        //std::cout << "Je suis la 1" << std::endl;
         float wavefinal=0.;
 
-		//cout << "Je suis la 5" << endl;
+        //std::cout << "Je suis la 5" << std::endl;
 
         isChangementdenote=false;
-		//cout << "Je suis la 6" << endl;
+        //std::cout << "Je suis la 6" << std::endl;
 
-        if (! (noteInf == ancienNoteVoulue)){
-						//cout << "Je suis la 2" << endl;
+        if (! (noteInf == ancienNoteVoulue))
+        {
+            //std::cout << "Je suis la 2" << std::endl;
             isChangementdenote=true;
-						//std::cout << "isChangementdenote\n" << std::endl;
+            std::cout << "isChangementdenote\n" << std::endl;
             ancienNoteVoulue=noteInf;
-
         }
 
         if (countKInf==(int)dureTabs[noteInf][0]) {

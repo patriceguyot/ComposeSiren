@@ -24,6 +24,9 @@ SirenePlugAudioProcessor::SirenePlugAudioProcessor()
 {
     startTimer(1);
     myMidiInHandler = new MidiIn;
+    
+    
+    
 }
 
 SirenePlugAudioProcessor::~SirenePlugAudioProcessor()
@@ -97,6 +100,11 @@ void SirenePlugAudioProcessor::prepareToPlay (double sampleRate, int samplesPerB
 {
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
+    int totalNumInputChannels  = getTotalNumInputChannels();
+    auto totalNumOutputChannels = getTotalNumOutputChannels();
+
+    std::cout << "total number of Input Channels: " << totalNumInputChannels << "\n";
+    std::cout << "total nomber of Output Channels: " << totalNumOutputChannels << "\n";
 }
 
 void SirenePlugAudioProcessor::releaseResources()
@@ -139,12 +147,13 @@ void SirenePlugAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
     int time;
     juce::MidiMessage m;
  
+    /*
     for (juce::MidiBuffer::Iterator i (midiMessages); i.getNextEvent (m, time);)
     {
         if (m.isNoteOn())
         {
-            juce::uint8 newVel = (juce::uint8)noteOnVel;
-            m = juce::MidiMessage::noteOn(m.getChannel(), m.getNoteNumber(), newVel);
+            //juce::uint8 newVel = (juce::uint8)noteOnVel;
+            //m = juce::MidiMessage::noteOn(m.getChannel(), m.getNoteNumber(), newVel);
             midiMessageIntArray = getIntFromMidiMessage(m.getRawData(), m.getRawDataSize());
             std::cout << "Message reçu ----------------------------------------------------------------------" << std::endl;
             std::cout << "Message: " << midiMessageIntArray[0] << "-" << midiMessageIntArray[1] << "-" << midiMessageIntArray[2] << "\n";
@@ -167,16 +176,32 @@ void SirenePlugAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
  
         processedMidi.addEvent (m, time);
     }
+    */
+    
+    for (const auto meta : midiMessages)
+    {
+        const auto msg = meta.getMessage();
+        midiMessageIntArray = getIntFromMidiMessage(msg.getRawData(), msg.getRawDataSize());
+        std::cout << "Message reçu ----------------------------------------------------------------------" << std::endl;
+        std::cout << "Message: " << midiMessageIntArray[0] << "-" << midiMessageIntArray[1] << "-" << midiMessageIntArray[2] << "\n";
+        myMidiInHandler -> handleMIDIMessage2(midiMessageIntArray[0], midiMessageIntArray[1], midiMessageIntArray[2]);
+        
+        processedMidi.addEvent (msg, time);
+
+      
+    }
  
     midiMessages.swapWith (processedMidi);
     
     float sampleS1 = 0;
+    /*
     float sampleS2 = 0;
     float sampleS3 = 0;
     float sampleS4 = 0;
     float sampleS5 = 0;
     float sampleS6 = 0;
     float sampleS7 = 0;
+     */
     
     myMidiInHandler -> timerAudio();
     
@@ -184,6 +209,8 @@ void SirenePlugAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
     juce::ScopedNoDenormals noDenormals;
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
+    
+    
 
     // In case we have more outputs than inputs, this code clears any output
     // channels that didn't contain input data, (because these aren't
@@ -211,14 +238,16 @@ void SirenePlugAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
                 
                 // ..do something to the data...
                 sampleS1 = myMidiInHandler -> mySynth -> s1 -> calculwave();
+                /*
                 sampleS2 = myMidiInHandler -> mySynth -> s2 -> calculwave();
                 sampleS3 = myMidiInHandler -> mySynth -> s3 -> calculwave();
                 sampleS4 = myMidiInHandler -> mySynth -> s4 -> calculwave();
                 sampleS5 = myMidiInHandler -> mySynth -> s5 -> calculwave();
                 sampleS6 = myMidiInHandler -> mySynth -> s6 -> calculwave();
                 sampleS7 = myMidiInHandler -> mySynth -> s7 -> calculwave();
+                 */
                 
-                channelData[sample]  = sampleS1 + + sampleS2 + sampleS3 + sampleS5;
+                channelData[sample]  = sampleS1; //+ sampleS2 + sampleS3 + sampleS5;
             }
     }
     

@@ -57,7 +57,8 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
     //==============================================================================
 
-    float noteOnVel;
+    //float noteOnVel; // value of the slider for volume control
+    
     int* getIntFromMidiMessage(const void* data, int size);
     void timerCallback() override;
     MidiIn* myMidiInHandler;

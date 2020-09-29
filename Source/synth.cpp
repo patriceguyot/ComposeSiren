@@ -49,12 +49,14 @@ Synth::Synth(){
     //VolClicz = 1.;
     WideCoeff=1.5;
     s1 = new Sirene("S1");
+    /*
     s2 = new Sirene("S2");
     s3 = new Sirene("S3");
     s4 = new Sirene("S4");
     s5 = new Sirene("S5");
     s6 = new Sirene("S6");
     s7 = new Sirene("S7");
+     */
 
 }
 

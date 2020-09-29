@@ -14,7 +14,7 @@
 //==============================================================================
 /**
 */
-class SirenePlugAudioProcessorEditor  : public juce::AudioProcessorEditor, private juce::Slider::Listener
+class SirenePlugAudioProcessorEditor  : public juce::AudioProcessorEditor//, private juce::Slider::Listener
 {
 public:
     SirenePlugAudioProcessorEditor (SirenePlugAudioProcessor&);
@@ -32,8 +32,11 @@ private:
     // access the processor object that created it.
     SirenePlugAudioProcessor& audioProcessor;
     
+    // slider volume
+    /*
     void sliderValueChanged (juce::Slider* slider) override;
     juce::Slider midiVolume;
+     */
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SirenePlugAudioProcessorEditor)
 };
