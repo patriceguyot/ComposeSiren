@@ -48,6 +48,9 @@ public:
     void setMuteShynthe(int Sirene, bool isMute);
     void setisCrossfade(int is);
     void timer512();
+    
+    float getPan(int sireneNumber, int channel);
+
 
     Sirene* s1;
     Sirene* s2;
@@ -105,7 +108,7 @@ private:
     float WideCoeff;//1.5;
     //bool fOnOffReverbe;//YES; pat : pas besoin
 
-    bool muteS1;//NO;
+    //bool muteS1;//NO;
     //float mIntervalFromAudio; // pat : pas besoin je crois
 
     //S1 *s1;

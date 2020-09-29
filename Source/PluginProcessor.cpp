@@ -209,8 +209,8 @@ void SirenePlugAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
                 sampleS7 = myMidiInHandler -> mySynth -> s7 -> calculwave();
                  
                 
-                channelLeft[sample]  = sampleS1 + sampleS2 + sampleS3 + sampleS5 + sampleS6 + sampleS7;
-                channelRight[sample]  = channelLeft[sample];
+                channelLeft[sample]  = sampleS1 * myMidiInHandler -> mySynth->getPan(1,0) + sampleS2 * myMidiInHandler -> mySynth->getPan(2,0) + sampleS3 * myMidiInHandler -> mySynth->getPan(3,0) + sampleS4 * myMidiInHandler -> mySynth->getPan(4,0) + sampleS5 * myMidiInHandler -> mySynth->getPan(5,0) + sampleS6 * myMidiInHandler -> mySynth->getPan(6,0) + sampleS7 * myMidiInHandler -> mySynth->getPan(7,0);
+                channelRight[sample]  = sampleS1 * myMidiInHandler -> mySynth->getPan(1,1) + sampleS2 * myMidiInHandler -> mySynth->getPan(2,1) + sampleS3 * myMidiInHandler -> mySynth->getPan(3,1) + sampleS4 * myMidiInHandler -> mySynth->getPan(4,1) + sampleS5 * myMidiInHandler -> mySynth->getPan(5,1) + sampleS6 * myMidiInHandler -> mySynth->getPan(6,1) + sampleS7 * myMidiInHandler -> mySynth->getPan(7,1);
             //}
     }
     

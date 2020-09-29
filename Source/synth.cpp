@@ -32,7 +32,14 @@ Synth::Synth(){
     //ICI TOUT LE TRUC DE OBJECTIVE C
     //fOnOffReverbe=true;
     //PanS1=0.75;
-    muteS1=false;
+    PanS1=0.25;
+    PanS2=0.75;
+    PanS3=0.4;
+    PanS4=0.6;
+    PanS5=0.1;
+    PanS6=0.9;
+    PanS7=0.65;
+    //muteS1=false;
     isWithSynthe=true;
     isWithClic=false;
     //volumeSynth=1.;
@@ -55,6 +62,8 @@ Synth::Synth(){
     s5 = new Sirene("S5");
     s6 = new Sirene("S6");
     s7 = new Sirene("S7");
+    
+    
      
 
 }
@@ -121,6 +130,40 @@ void Synth::setPan(int sireneNumber, float value){
             default:
                 break;
         }
+    }
+}
+
+float Synth::getPan(int sireneNumber, int channel)
+{
+    // Return the panoramic value according to the sirene number and the channel (left : 0, right :1)
+    if(channel){
+        // right channel
+        switch (sireneNumber) {
+            case 1: return 1-PanS1;  break;
+            case 2: return 1-PanS2;  break;
+            case 3: return 1-PanS3;  break;
+            case 4: return 1-PanS4;  break;
+            case 5: return 1-PanS5;  break;
+            case 6: return 1-PanS6;  break;
+            case 7: return 1-PanS7;  break;
+            default:  return 0;
+        }
+    }
+    else
+    {
+        // left channel
+
+        switch (sireneNumber) {
+            case 1: return PanS1;  break;
+            case 2: return PanS2;  break;
+            case 3: return PanS3;  break;
+            case 4: return PanS4;  break;
+            case 5: return PanS5;  break;
+            case 6: return PanS6;  break;
+            case 7: return PanS7;  break;
+            default:  return 0;
+        
+    }
     }
 }
 
