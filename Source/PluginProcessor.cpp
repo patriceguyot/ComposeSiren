@@ -163,7 +163,7 @@ void SirenePlugAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
     float sampleS7 = 0;
      */
     
-    myMidiInHandler -> timerAudio();
+    //myMidiInHandler -> timerAudio();
     
     //Pat: original code of the audio plug in template
     juce::ScopedNoDenormals noDenormals;
@@ -179,7 +179,8 @@ void SirenePlugAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
     // when they first compile a plugin, but obviously you don't need to keep
     // this code if your algorithm always overwrites all the output channels.
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
-        buffer.clear (i, 0, buffer.getNumSamples());
+        
+        //buffer.clear (i, 0, buffer.getNumSamples());
 
         // This is the place where you'd normally do the guts of your plugin's
         // audio processing...
@@ -187,10 +188,13 @@ void SirenePlugAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
         // the samples and the outer loop is handling the channels.
         // Alternatively, you can process the samples with the channels
         // interleaved by keeping the same state.
-        for (int channel = 0; channel < totalNumOutputChannels; ++channel)
-        {
+        
+        int channel = 0;
+        //for (int channel = 0; channel < totalNumOutputChannels; ++channel)
+        //{
             
-            auto* channelData = buffer.getWritePointer (channel);
+        auto* channelLeft = buffer.getWritePointer (0);
+        auto* channelRight = buffer.getWritePointer (1);
             
             
             for (auto sample = 0; sample < buffer.getNumSamples(); sample++)
@@ -207,8 +211,9 @@ void SirenePlugAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
                 sampleS7 = myMidiInHandler -> mySynth -> s7 -> calculwave();
                  */
                 
-                channelData[sample]  = sampleS1; //+ sampleS2 + sampleS3 + sampleS5;
-            }
+                channelLeft[sample]  = sampleS1; //+ sampleS2 + sampleS3 + sampleS5;
+                channelRight[sample]  = sampleS1;
+            //}
     }
     
 }
