@@ -139,45 +139,10 @@ bool SirenePlugAudioProcessor::isBusesLayoutSupported (const BusesLayout& layout
 
 void SirenePlugAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
 {
-    
-    
+        
     buffer.clear();
- 
-    juce::MidiBuffer processedMidi;
-    int time;
-    juce::MidiMessage m;
- 
-    /*
-    for (juce::MidiBuffer::Iterator i (midiMessages); i.getNextEvent (m, time);)
-    {
-        if (m.isNoteOn())
-        {
-            //juce::uint8 newVel = (juce::uint8)noteOnVel;
-            //m = juce::MidiMessage::noteOn(m.getChannel(), m.getNoteNumber(), newVel);
-            midiMessageIntArray = getIntFromMidiMessage(m.getRawData(), m.getRawDataSize());
-            std::cout << "Message reçu ----------------------------------------------------------------------" << std::endl;
-            std::cout << "Message: " << midiMessageIntArray[0] << "-" << midiMessageIntArray[1] << "-" << midiMessageIntArray[2] << "\n";
-            myMidiInHandler -> handleMIDIMessage2(midiMessageIntArray[0], midiMessageIntArray[1], midiMessageIntArray[2]);
 
-        }
-        else if (m.isNoteOff())
-        {
-            midiMessageIntArray = getIntFromMidiMessage(m.getRawData(), m.getRawDataSize());
-            myMidiInHandler -> handleMIDIMessage2(midiMessageIntArray[0], midiMessageIntArray[1], midiMessageIntArray[2]);
-
-
-        }
-        else if (m.isAftertouch())
-        {
-        }
-        else if (m.isPitchWheel())
-        {
-        }
- 
-        processedMidi.addEvent (m, time);
-    }
-    */
-    
+    // process midi message
     for (const auto meta : midiMessages)
     {
         const auto msg = meta.getMessage();
@@ -185,13 +150,8 @@ void SirenePlugAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
         std::cout << "Message reçu ----------------------------------------------------------------------" << std::endl;
         std::cout << "Message: " << midiMessageIntArray[0] << "-" << midiMessageIntArray[1] << "-" << midiMessageIntArray[2] << "\n";
         myMidiInHandler -> handleMIDIMessage2(midiMessageIntArray[0], midiMessageIntArray[1], midiMessageIntArray[2]);
-        
-        processedMidi.addEvent (msg, time);
-
-      
     }
  
-    midiMessages.swapWith (processedMidi);
     
     float sampleS1 = 0;
     /*
@@ -307,12 +267,14 @@ int* SirenePlugAudioProcessor::getIntFromMidiMessage(const void * data, int size
 void SirenePlugAudioProcessor::timerCallback()
 {
     myMidiInHandler -> mySynth -> s1 -> setnote();
+    /*
     myMidiInHandler -> mySynth -> s2 -> setnote();
     myMidiInHandler -> mySynth -> s3 -> setnote();
     myMidiInHandler -> mySynth -> s4 -> setnote();
     myMidiInHandler -> mySynth -> s5 -> setnote();
     myMidiInHandler -> mySynth -> s6 -> setnote();
     myMidiInHandler -> mySynth -> s7 -> setnote();
+     */
     
 }
 

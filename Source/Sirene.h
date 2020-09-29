@@ -73,7 +73,7 @@ public:
         {
             //std::cout << "Je suis la 2" << std::endl;
             isChangementdenote=true;
-            std::cout << "isChangementdenote\n" << std::endl;
+            //std::cout << "isChangementdenote\n" << std::endl;
             ancienNoteVoulue=noteInf;
         }
 
