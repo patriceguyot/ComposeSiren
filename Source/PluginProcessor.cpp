@@ -164,7 +164,7 @@ void SirenePlugAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
     float sampleS7 = 0;
     
     
-    //myMidiInHandler -> timerAudio();
+    myMidiInHandler -> timerAudio();
     
     //Pat: original code of the audio plug in template
     juce::ScopedNoDenormals noDenormals;

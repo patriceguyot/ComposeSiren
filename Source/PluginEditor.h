@@ -45,7 +45,14 @@ private:
         if (button == &resetButton)
         {
             std::cout << "Reset"<<std::endl;
-
+            audioProcessor.myMidiInHandler -> resetSireneCh(1);
+            audioProcessor.myMidiInHandler -> resetSireneCh(2);
+            audioProcessor.myMidiInHandler -> resetSireneCh(3);
+            audioProcessor.myMidiInHandler -> resetSireneCh(4);
+            audioProcessor.myMidiInHandler -> resetSireneCh(5);
+            audioProcessor.myMidiInHandler -> resetSireneCh(6);
+            audioProcessor.myMidiInHandler -> resetSireneCh(7);
+        
         }
     }
     

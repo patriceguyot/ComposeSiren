@@ -499,6 +499,8 @@ void MidiIn::STOnVariateurCh(int Ch){
 
 void MidiIn::resetSireneCh(int Ch){
 
+    std::cout << "Reset: "<< Ch << std::endl;
+
     noteonfinalCh[Ch]=0.0;
     ///////////////////////////////////////////////////****** Ferme les volets
 
