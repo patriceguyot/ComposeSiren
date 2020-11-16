@@ -16,7 +16,7 @@ SirenePlugAudioProcessorEditor::SirenePlugAudioProcessorEditor (SirenePlugAudioP
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
     setSize (200, 200);
-    
+
     // volume slider
     /*
     midiVolume.setSliderStyle (juce::Slider::LinearBarVertical);
@@ -25,20 +25,20 @@ SirenePlugAudioProcessorEditor::SirenePlugAudioProcessorEditor (SirenePlugAudioP
     midiVolume.setPopupDisplayEnabled (true, false, this);
     midiVolume.setTextValueSuffix (" Volume");
     midiVolume.setValue(1.0);
-    
+
     addAndMakeVisible (&midiVolume);
-    
+
     midiVolume.addListener (this);
     */
-    
-    
+
+
     resetButton.setButtonText ("Reset");
     //resetButton.setColour(juce::Label::backgroundColourId, juce::Colours::red);
     //resetButton.setColour(juce::Label::textColourId, juce::Colours::black);
     addAndMakeVisible (resetButton);
     resetButton.addListener (this);
-    
-    
+
+
 }
 
 SirenePlugAudioProcessorEditor::~SirenePlugAudioProcessorEditor()
@@ -51,18 +51,20 @@ SirenePlugAudioProcessorEditor::~SirenePlugAudioProcessorEditor()
 void SirenePlugAudioProcessorEditor::paint (juce::Graphics& g)
 {
     // (Our component is opaque, so we must completely fill the background with a solid colour)
-    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
+    //g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
+
+    g.fillAll (juce::Colour (255, 153, 0));
 
     g.setColour (juce::Colours::white);
     g.setFont (15.0f);
     g.drawFittedText ("Sirene plugin", 0, 0, getWidth(), 30, juce::Justification::centred, 1);
-    
+
 }
 
 
 void SirenePlugAudioProcessorEditor::resized()
 {
-    
+
     resetButton.setBounds (30, 30, 50, 50);
 }
 
@@ -83,4 +85,3 @@ void buttonClicked (juce::Button* button)
     }
 }
 */
-
