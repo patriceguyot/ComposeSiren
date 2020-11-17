@@ -45,7 +45,8 @@ SirenePlugAudioProcessorEditor::SirenePlugAudioProcessorEditor (SirenePlugAudioP
     //resetButton.setFont (juce::Font (14.0f, juce::Font::bold)); // no set font for textbutton :-(
     //resetButton.setColour(juce::Label::textColourId, juce::Colours::black);
     resetButton.addListener (this);
-    
+
+    /*
     addAndMakeVisible(sirenMenu);
     sirenMenu.setText("Siren selector", juce::dontSendNotification);
     sirenMenu.addItem("Siren 1 - alto", 1);
@@ -55,7 +56,7 @@ SirenePlugAudioProcessorEditor::SirenePlugAudioProcessorEditor (SirenePlugAudioP
     sirenMenu.addItem("Siren 5 - soprano", 5);
     sirenMenu.addItem("Siren 6 - soprano", 6);
     sirenMenu.addItem("Siren 7 - picollo", 7);
-
+    */
 
 }
 
@@ -85,7 +86,7 @@ void SirenePlugAudioProcessorEditor::resized()
 
     // void Component::setBounds  (int x, int y, int width, int height) - top left
     labelPluginTitle.setBounds (20, 10, getWidth() - 40, 20);
-    sirenMenu.setBounds (30, 40, 130, 40);
+    //sirenMenu.setBounds (30, 40, 130, 40);
     resetButton.setBounds (30, 90, 60, 40);
 
 }

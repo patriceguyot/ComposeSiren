@@ -58,7 +58,7 @@ private:
 
     juce::TextButton resetButton;
     juce::Label labelPluginTitle;
-    juce::ComboBox sirenMenu;
+    //juce::ComboBox sirenMenu;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SirenePlugAudioProcessorEditor)
 };
