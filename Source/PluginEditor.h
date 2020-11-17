@@ -11,10 +11,10 @@
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
 
-//==============================================================================
-/**
-*/
 
+
+//==============================================================================
+// class headComponent : head of the main window
 class headComponent   : public juce::Component
 {
 public:
@@ -28,13 +28,11 @@ private:
     juce::Label labelPluginTitle;
 };
 
-
 //==============================================================================
 
 
 class SirenePlugAudioProcessorEditor  : public juce::AudioProcessorEditor, public juce::Button::Listener
 
-//, private juce::Slider::Listener
 {
 public:
     SirenePlugAudioProcessorEditor (SirenePlugAudioProcessor&);
@@ -52,11 +50,6 @@ private:
     // access the processor object that created it.
     SirenePlugAudioProcessor& audioProcessor;
 
-    // slider volume
-    /*
-    void sliderValueChanged (juce::Slider* slider) override;
-    juce::Slider midiVolume;
-     */
 
     void buttonClicked (juce::Button* button) override
     {
@@ -76,7 +69,6 @@ private:
 
     juce::TextButton resetButton;
     headComponent head;
-    //juce::ComboBox sirenMenu;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SirenePlugAudioProcessorEditor)
 };
