@@ -9,6 +9,57 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
+
+
+//==============================================================================
+headComponent::headComponent()
+{
+    addAndMakeVisible (labelPluginTitle);
+    labelPluginTitle.setText("COMPOSE SIREN", juce::dontSendNotification);
+}
+
+void headComponent::paint (juce::Graphics& g)
+{
+    //g.fillAll (juce::Colour (155, 153, 100)); // background color to see the head
+    addAndMakeVisible (labelPluginTitle);
+
+    labelPluginTitle.setColour (juce::Label::textColourId, juce::Colours::black);
+    labelPluginTitle.setText("COMPOSE SIREN", juce::dontSendNotification);
+
+    labelPluginTitle.setFont (juce::Font (15.0f, juce::Font::italic));
+    labelPluginTitle.setJustificationType (juce::Justification::centred);
+}
+
+
+void headComponent::resized()
+{
+    labelPluginTitle.setBounds (getLocalBounds());
+}
+/*
+: public juce::Component
+{
+public:
+    headComponent() {}
+
+    void paint (juce::Graphics& g) override
+    {
+        addAndMakeVisible (labelPluginTitle);
+        labelPluginTitle.setColour (juce::Label::textColourId, juce::Colours::black);
+        labelPluginTitle.setText("COMPOSE SIREN", juce::dontSendNotification);
+        labelPluginTitle.setFont (juce::Font (15.0f, juce::Font::italic));
+        labelPluginTitle.setJustificationType (juce::Justification::centred);
+    }
+
+private:
+    //==============================================================================
+    juce::Label labelPluginTitle;
+};
+*/
+
+
+
+
+
 //==============================================================================
 SirenePlugAudioProcessorEditor::SirenePlugAudioProcessorEditor (SirenePlugAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p)
@@ -30,12 +81,8 @@ SirenePlugAudioProcessorEditor::SirenePlugAudioProcessorEditor (SirenePlugAudioP
 
     midiVolume.addListener (this);
     */
-
-    addAndMakeVisible (labelPluginTitle);
-    labelPluginTitle.setColour (juce::Label::textColourId, juce::Colours::black);
-    labelPluginTitle.setText("COMPOSE SIREN", juce::dontSendNotification);
-    labelPluginTitle.setFont (juce::Font (15.0f, juce::Font::italic));
-    labelPluginTitle.setJustificationType (juce::Justification::centred);
+    addAndMakeVisible (head);
+    
 
     addAndMakeVisible (resetButton);
     resetButton.setColour(juce::TextButton::buttonColourId, juce::Colours::red);
@@ -85,7 +132,8 @@ void SirenePlugAudioProcessorEditor::resized()
 {
 
     // void Component::setBounds  (int x, int y, int width, int height) - top left
-    labelPluginTitle.setBounds (20, 10, getWidth() - 40, 20);
+    //labelPluginTitle.setBounds (20, 10, getWidth() - 40, 20);
+    head.setBounds(0, 0, getWidth(), 30);
     //sirenMenu.setBounds (30, 40, 130, 40);
     resetButton.setBounds (30, 90, 60, 40);
 

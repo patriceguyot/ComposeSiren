@@ -14,6 +14,24 @@
 //==============================================================================
 /**
 */
+
+class headComponent   : public juce::Component
+{
+public:
+    headComponent();
+
+    void paint (juce::Graphics&) override;
+    void resized() override;
+
+private:
+    //==============================================================================
+    juce::Label labelPluginTitle;
+};
+
+
+//==============================================================================
+
+
 class SirenePlugAudioProcessorEditor  : public juce::AudioProcessorEditor, public juce::Button::Listener
 
 //, private juce::Slider::Listener
@@ -57,7 +75,7 @@ private:
     }
 
     juce::TextButton resetButton;
-    juce::Label labelPluginTitle;
+    headComponent head;
     //juce::ComboBox sirenMenu;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SirenePlugAudioProcessorEditor)
