@@ -4,8 +4,7 @@ ComposeSiren is a vst3 plugin that synthesize sounds of siren made by the [Méca
 
 The plugin file, called **ComposseSiren.vst3**, is located in the folder: *builds/MacOSX/*.
 
-## Version history
-
+### Version history:
 - 1.1.0 - Improved GUI
 - 1.0.0 - First version of the plugin
 
