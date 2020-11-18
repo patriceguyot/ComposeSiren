@@ -21,7 +21,7 @@ You'll find [here][3] more info on how to use the plugin with Ableton Live.
 
 ### Development
 
-ComposeSiren is developed on top of the JUCE frameworks. You can find more infos about it there: http://www.juce.com.
+ComposeSiren is developed on top of the **JUCE** frameworks. You can find more infos about it there: http://www.juce.com.
 
 ComposeSiren is currently built on macOS as a 64-bit VST3, and currently tested on Ableton Live.
 
