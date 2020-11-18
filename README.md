@@ -6,8 +6,8 @@ The plugin file, called **ComposseSiren.vst3**, is located in the folder: *build
 
 ## Version history
 
-1.1.0 - Improved GUI
-1.0.0 - First version of the plugin
+- 1.1.0 - Improved GUI
+- 1.0.0 - First version of the plugin
 
 
 
