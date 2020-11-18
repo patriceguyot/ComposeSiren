@@ -13,7 +13,7 @@ The plugin allows to handle the seven-piece Siren Orchestra:
 ### Using the plugin
 
 
-The plugin file, called **ComposseSiren.vst3**, is located in the folder: *builds/MacOSX/*.
+The plugin file, called **ComposeSiren.vst3**, is located in the folder: *builds/MacOSX/*.
 
 You can **download the plugin directly** with this [link][2].
 
@@ -21,8 +21,8 @@ You'll find [here][3] more info on how to use the plugin with Ableton Live.
 
 ### Development
 
-
-ComposeSiren is currently build with JUCE on macOS as a 64-bit VST3, and currently tested on Ableton Live.
+ComposeSiren is built on top of the JUCE frameworks. You can find more infos about it there : http://www.juce.com.
+ComposeSiren is currently build on macOS as a 64-bit VST3, and currently tested on Ableton Live.
 
 
 ### Version history:
