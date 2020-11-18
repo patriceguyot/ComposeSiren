@@ -2,7 +2,11 @@
 
 ComposeSiren is a vst3 plugin that synthesize sounds of siren made by the [Mécanique Vivante][1] company. The plugin allows to handle the seven-piece Siren Orchestra: a piccolo, two sopranos, two altos, a tenor and a bass.
 
+
 The plugin file, called **ComposseSiren.vst3**, is located in the folder: *builds/MacOSX/*.
+
+ComposeSiren is currently build with JUCE on macOS as a 64-bit VST3. 
+
 
 ### Version history:
 - 1.1.0 - Improved GUI
