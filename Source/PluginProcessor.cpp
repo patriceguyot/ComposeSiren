@@ -271,6 +271,7 @@ int* SirenePlugAudioProcessor::getIntFromMidiMessage(const void * data, int size
 
 void SirenePlugAudioProcessor::timerCallback()
 {
+    
     myMidiInHandler -> mySynth -> s1 -> setnote();
     myMidiInHandler -> mySynth -> s2 -> setnote();
     myMidiInHandler -> mySynth -> s3 -> setnote();
@@ -279,7 +280,6 @@ void SirenePlugAudioProcessor::timerCallback()
     myMidiInHandler -> mySynth -> s6 -> setnote();
     myMidiInHandler -> mySynth -> s7 -> setnote();
      
-    
 }
 
 

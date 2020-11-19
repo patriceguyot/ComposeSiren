@@ -24,8 +24,30 @@ public:
     void resized() override;
 
 private:
-    //==============================================================================
     juce::Label labelPluginTitle;
+    juce::Image imgLogo;
+};
+
+//==============================================================================
+
+
+//==============================================================================
+// class MainCommandsComponent : main commands
+class MainCommandsComponent   : public juce::Component
+{
+public:
+    MainCommandsComponent();
+    ~MainCommandsComponent();
+
+    void paint (juce::Graphics&) override;
+    void resized() override;
+    
+    juce::TextButton resetButton;
+
+private:
+    
+   
+    
 };
 
 //==============================================================================
@@ -49,11 +71,15 @@ private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     SirenePlugAudioProcessor& audioProcessor;
-
-
+    
+    headComponent head;
+    MainCommandsComponent mainCommands;
+    
     void buttonClicked (juce::Button* button) override
     {
-        if (button == &resetButton)
+        //juce::String buttonName = button->getComponentID();
+        //if (buttonName == "reset")
+        if (button == &mainCommands.resetButton)
         {
             std::cout << "Reset"<<std::endl;
             audioProcessor.myMidiInHandler -> resetSireneCh(1);
@@ -67,8 +93,5 @@ private:
         }
     }
 
-    juce::TextButton resetButton;
-    headComponent head;
-
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SirenePlugAudioProcessorEditor)
+    //JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SirenePlugAudioProcessorEditor)
 };
