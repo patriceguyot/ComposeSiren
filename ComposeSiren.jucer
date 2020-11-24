@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="kKb8oN" name="ComposeSiren" projectType="audioplug" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" pluginFormats="buildVST3"
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" pluginFormats="buildAU,buildVST3"
               pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
               companyName="MecaniqueVivante" companyWebsite="https://www.mecanique-vivante.com"
               displaySplashScreen="1" version="1.1.0">
@@ -49,10 +49,8 @@
             file="Resources/dataVectorIntervalS5" xcodeResource="1"/>
       <FILE id="h8epW9" name="dataVectorIntervalS7" compile="0" resource="0"
             file="Resources/dataVectorIntervalS7" xcodeResource="1"/>
-      <FILE id="hZChsU" name="Picto_Siren.png" compile="0" resource="1" file="../images/Picto_Siren.png"
-            xcodeResource="1"/>
       <FILE id="ROekeC" name="Picto_Siren_40x37.png" compile="0" resource="1"
-            file="../images/Picto_Siren_40x37.png" xcodeResource="1"/>
+            file="../images/Picto_Siren_40x37.png" xcodeResource="0"/>
     </GROUP>
     <GROUP id="{76B1EC72-F9E3-7278-73FE-DEA70DFB6843}" name="Source">
       <FILE id="MMig42" name="CS_midiIN.h" compile="0" resource="0" file="Source/CS_midiIN.h"/>

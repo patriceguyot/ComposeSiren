@@ -73,6 +73,9 @@ void MainCommandsComponent::paint (juce::Graphics& g)
     resetButton.setButtonText ("Reset");
     //resetButton.setFont (juce::Font (14.0f, juce::Font::bold)); // no set font for textbutton :-(
     //resetButton.setColour(juce::Label::textColourId, juce::Colours::black);
+    
+    //resetButton.onClick = [This] { doSomething(); };
+
 
 }
 
