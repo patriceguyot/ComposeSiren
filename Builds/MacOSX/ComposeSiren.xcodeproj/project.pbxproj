@@ -9,9 +9,17 @@
 			isa = PBXBuildFile;
 			fileRef = 2A308593FDB04D974DE2C5A3;
 		};
+		C1395E5A9ABDE2571478ED39 = {
+			isa = PBXBuildFile;
+			fileRef = E1683FFDF0E3EAA8242C3A84;
+		};
 		3DAF9D9E36AE584420CA0A53 = {
 			isa = PBXBuildFile;
 			fileRef = 867F4B3288102A02A049EAF6;
+		};
+		4BCFBF5BC73654E9DE432A55 = {
+			isa = PBXBuildFile;
+			fileRef = 2A95FBA679C65938A501FD8B;
 		};
 		582855257A165E2B7DA50046 = {
 			isa = PBXBuildFile;
@@ -145,14 +153,6 @@
 			isa = PBXBuildFile;
 			fileRef = B679B4CA88FD47B854EF0F91;
 		};
-		A4679F1B9EFEBCB62DDF0D8D = {
-			isa = PBXBuildFile;
-			fileRef = FD905A8BDE7351059BCBAEA4;
-		};
-		55DC0E78C0B241BFDCA5E055 = {
-			isa = PBXBuildFile;
-			fileRef = 1E9D034D6A9F72FC98552A60;
-		};
 		FBEEADDAD74929350E24C04A = {
 			isa = PBXBuildFile;
 			fileRef = 8028530A98E08BF543EFF922;
@@ -188,6 +188,18 @@
 		788A81FE778465CAA57E4E4F = {
 			isa = PBXBuildFile;
 			fileRef = 87AC5A9D8B788C60E0167C16;
+		};
+		FBEF721EB9D54549C3D093B2 = {
+			isa = PBXBuildFile;
+			fileRef = E6FBAA21C6FC9CD0880432F7;
+		};
+		B59FCD256E46137D9F14B1C7 = {
+			isa = PBXBuildFile;
+			fileRef = 661C6246D78D1814926C823A;
+		};
+		DBA6F431A527817E214F4C88 = {
+			isa = PBXBuildFile;
+			fileRef = 9146F41CF62F82326D96FB0F;
 		};
 		514CB447E096BBDD6AA6A929 = {
 			isa = PBXBuildFile;
@@ -352,6 +364,13 @@
 			path = ComposeSiren.vst3;
 			sourceTree = "BUILT_PRODUCTS_DIR";
 		};
+		2A95FBA679C65938A501FD8B = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AudioUnit.framework;
+			path = System/Library/Frameworks/AudioUnit.framework;
+			sourceTree = SDKROOT;
+		};
 		36EFA32E6977FE3E1D94F618 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.objcpp;
@@ -450,6 +469,13 @@
 			path = System/Library/Frameworks/CoreMIDI.framework;
 			sourceTree = SDKROOT;
 		};
+		661C6246D78D1814926C823A = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_audio_plugin_client_AU_1.mm";
+			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_AU_1.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
 		68B31A5F65853634949FEDB4 = {
 			isa = PBXFileReference;
 			lastKnownFileType = wrapper.framework;
@@ -499,6 +525,13 @@
 			path = ../../Resources/dataFreqS3;
 			sourceTree = "SOURCE_ROOT";
 		};
+		75B4B8C1D0646E86F61F8857 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			name = "Info-AU.plist";
+			path = "Info-AU.plist";
+			sourceTree = "SOURCE_ROOT";
+		};
 		7A521552BD29CDE0020D0200 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
@@ -541,13 +574,6 @@
 			path = ../../Resources/dataVectorIntervalS1;
 			sourceTree = "SOURCE_ROOT";
 		};
-		867F4B3288102A02A049EAF6 = {
-			isa = PBXFileReference;
-			explicitFileType = archive.ar;
-			includeInIndex = 0;
-			path = libComposeSiren.a;
-			sourceTree = "BUILT_PRODUCTS_DIR";
-		};
 		87AC5A9D8B788C60E0167C16 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.objcpp;
@@ -569,13 +595,6 @@
 			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_VST_utils.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
-		8BE775AF502DCE91F4DE04D4 = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = dataVectorIntervalS3;
-			path = ../../Resources/dataVectorIntervalS3;
-			sourceTree = "SOURCE_ROOT";
-		};
 		8C2FD32B4C440756E0613C92 = {
 			isa = PBXFileReference;
 			lastKnownFileType = wrapper.framework;
@@ -590,12 +609,54 @@
 			path = ../../Source/PluginEditor.h;
 			sourceTree = "SOURCE_ROOT";
 		};
+		9146F41CF62F82326D96FB0F = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_audio_plugin_client_AU_2.mm";
+			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_AU_2.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
 		94B2D67FBE95B9E5CBDC3879 = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
 			name = "juce_gui_basics";
 			path = "~/JUCE/modules/juce_gui_basics";
 			sourceTree = "<absolute>";
+		};
+		A9AAF41617E99E9053216D13 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = dataFreqS1;
+			path = ../../Resources/dataFreqS1;
+			sourceTree = "SOURCE_ROOT";
+		};
+		B2BB1C758B1438AA97776FC2 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreAudio.framework;
+			path = System/Library/Frameworks/CoreAudio.framework;
+			sourceTree = SDKROOT;
+		};
+		E1683FFDF0E3EAA8242C3A84 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.cfbundle;
+			includeInIndex = 0;
+			path = ComposeSiren.component;
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+		867F4B3288102A02A049EAF6 = {
+			isa = PBXFileReference;
+			explicitFileType = archive.ar;
+			includeInIndex = 0;
+			path = libComposeSiren.a;
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+		8BE775AF502DCE91F4DE04D4 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = dataVectorIntervalS3;
+			path = ../../Resources/dataVectorIntervalS3;
+			sourceTree = "SOURCE_ROOT";
 		};
 		98384498A7067BB20D4D03AD = {
 			isa = PBXFileReference;
@@ -618,26 +679,12 @@
 			path = ../../JuceLibraryCode/JuceHeader.h;
 			sourceTree = "SOURCE_ROOT";
 		};
-		A9AAF41617E99E9053216D13 = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = dataFreqS1;
-			path = ../../Resources/dataFreqS1;
-			sourceTree = "SOURCE_ROOT";
-		};
 		AFE8C5D3CDB5F68B5848CAC0 = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
 			name = "juce_audio_utils";
 			path = "~/JUCE/modules/juce_audio_utils";
 			sourceTree = "<absolute>";
-		};
-		B2BB1C758B1438AA97776FC2 = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = CoreAudio.framework;
-			path = System/Library/Frameworks/CoreAudio.framework;
-			sourceTree = SDKROOT;
 		};
 		B5985A59633499DE36B1143B = {
 			isa = PBXFileReference;
@@ -737,6 +784,13 @@
 			path = System/Library/Frameworks/Accelerate.framework;
 			sourceTree = SDKROOT;
 		};
+		E6FBAA21C6FC9CD0880432F7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.r;
+			name = "include_juce_audio_plugin_client_AU.r";
+			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_AU.r";
+			sourceTree = "SOURCE_ROOT";
+		};
 		E7C1B51B36A35F97CBD37443 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.c.h;
@@ -772,12 +826,13 @@
 			path = "../../JuceLibraryCode/include_juce_audio_devices.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
-		FD905A8BDE7351059BCBAEA4 = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.png;
-			name = "Picto_Siren.png";
-			path = "../../../images/Picto_Siren.png";
-			sourceTree = "SOURCE_ROOT";
+		B4B4544BB6DC922B7DDE455F = {
+			isa = PBXGroup;
+			children = (
+				1E9D034D6A9F72FC98552A60,
+			);
+			name = Resources;
+			sourceTree = "<group>";
 		};
 		F14EEEE09A0932E80F7F03F5 = {
 			isa = PBXGroup;
@@ -799,6 +854,7 @@
 		346224D213A9C32242B3F0AA = {
 			isa = PBXGroup;
 			children = (
+				B4B4544BB6DC922B7DDE455F,
 				F14EEEE09A0932E80F7F03F5,
 			);
 			name = ComposeSiren;
@@ -831,6 +887,9 @@
 				55E3AAF71078985A04A3FE8D,
 				FB8BE2B550E8F8BC329BC1A3,
 				87AC5A9D8B788C60E0167C16,
+				E6FBAA21C6FC9CD0880432F7,
+				661C6246D78D1814926C823A,
+				9146F41CF62F82326D96FB0F,
 				7A521552BD29CDE0020D0200,
 				8B37981DE36C4C2910A09C2F,
 				C9464A37105ED260EA1A321B,
@@ -852,6 +911,7 @@
 			isa = PBXGroup;
 			children = (
 				CAA9786FD3FBC493674EE8E4,
+				75B4B8C1D0646E86F61F8857,
 				0E177F201D76D25FF724B51E,
 				BD2FCA09809A9BC2188364CA,
 				CDD3524B7D1F8267641BA473,
@@ -874,8 +934,6 @@
 				1E8A3287481C555771CB769C,
 				8159F09412415E628A2BEDDD,
 				B679B4CA88FD47B854EF0F91,
-				FD905A8BDE7351059BCBAEA4,
-				1E9D034D6A9F72FC98552A60,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -883,6 +941,7 @@
 		3588EB6152D2F765B182B772 = {
 			isa = PBXGroup;
 			children = (
+				2A95FBA679C65938A501FD8B,
 				E3FADA3A87F49E5F62FAF472,
 				68B31A5F65853634949FEDB4,
 				3BB064CE7E24AD3FE14A1B36,
@@ -902,6 +961,7 @@
 			isa = PBXGroup;
 			children = (
 				2A308593FDB04D974DE2C5A3,
+				E1683FFDF0E3EAA8242C3A84,
 				867F4B3288102A02A049EAF6,
 			);
 			name = Products;
@@ -924,11 +984,19 @@
 			isa = PBXTargetDependency;
 			target = 687B1153C3117F62B39A021C;
 		};
+		1EB215D57D98342F4C705878 = {
+			isa = PBXTargetDependency;
+			target = FFC3A730D1B407259A1FE875;
+		};
 		208C7A18BAA7559434671965 = {
 			isa = PBXTargetDependency;
 			target = 108DBA77A4D71E8F133BF81A;
 		};
 		43B733DFC9E4A9240044E075 = {
+			isa = PBXTargetDependency;
+			target = 108DBA77A4D71E8F133BF81A;
+		};
+		AC99727FE08FA665300BDBC5 = {
 			isa = PBXTargetDependency;
 			target = 108DBA77A4D71E8F133BF81A;
 		};
@@ -970,7 +1038,7 @@
 					"JUCE_APP_VERSION_HEX=0x10100",
 					"JucePlugin_Build_VST=0",
 					"JucePlugin_Build_VST3=1",
-					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AU=1",
 					"JucePlugin_Build_AUv3=0",
 					"JucePlugin_Build_RTAS=0",
 					"JucePlugin_Build_AAX=0",
@@ -1090,7 +1158,7 @@
 					"JUCE_APP_VERSION_HEX=0x10100",
 					"JucePlugin_Build_VST=0",
 					"JucePlugin_Build_VST3=1",
-					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AU=1",
 					"JucePlugin_Build_AUv3=0",
 					"JucePlugin_Build_RTAS=0",
 					"JucePlugin_Build_AAX=0",
@@ -1189,6 +1257,249 @@
 			};
 			name = Release;
 		};
+		D28BF68EAEDE7CD7F35C4218 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				COPY_PHASE_STRIP = NO;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_DEBUG=1",
+					"DEBUG=1",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.1.0",
+					"JUCE_APP_VERSION_HEX=0x10100",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=1",
+					"JucePlugin_Build_AU=1",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_RTAS=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x60004",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Name=\\\"ComposeSiren\\\"",
+					"JucePlugin_Desc=\\\"ComposeSiren\\\"",
+					"JucePlugin_Manufacturer=\\\"MecaniqueVivante\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"https://www.mecanique-vivante.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x4b6b6238",
+					"JucePlugin_IsSynth=1",
+					"JucePlugin_WantsMidiInput=1",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.1.0",
+					"JucePlugin_VersionCode=0x10100",
+					"JucePlugin_VersionString=\\\"1.1.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategSynth",
+					"JucePlugin_Vst3Category=\\\"Instrument|Synth\\\"",
+					"JucePlugin_AUMainType='aumu'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=ComposeSirenAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"ComposeSirenAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.MecaniqueVivante.ComposeSiren",
+					"JucePlugin_RTASCategory=2048",
+					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
+					"JucePlugin_RTASDisableBypass=0",
+					"JucePlugin_RTASDisableMultiMono=0",
+					"JucePlugin_AAXIdentifier=com.MecaniqueVivante.ComposeSiren",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=2048",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757269",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"MecaniqueVivante:\\ ComposeSiren\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"../../JuceLibraryCode",
+					"$(HOME)/JUCE/modules",
+					"/usr/local/Cellar/boost/1.72.0_3/include",
+					"$(HOME)/JUCE/modules/juce_audio_plugin_client",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-AU.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/Components/";
+				LIBRARY_STYLE = Bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_HEADER_SEARCH_PATHS = (
+					"$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"../../JuceLibraryCode",
+					"$(HOME)/JUCE/modules",
+					"/usr/local/Cellar/boost/1.72.0_3/include",
+					"$(HOME)/JUCE/modules/juce_audio_plugin_client",
+				);
+				OTHER_LDFLAGS = "-bundle -lComposeSiren";
+				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MecaniqueVivante.ComposeSiren;
+				PRODUCT_NAME = "ComposeSiren";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+				WRAPPER_EXTENSION = component;
+			};
+			name = Debug;
+		};
+		DED9D7441133FF5FC685A2C3 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
+				DEAD_CODE_STRIPPING = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_NDEBUG=1",
+					"NDEBUG=1",
+					"JUCER_XCODE_MAC_F6D2F4CF=1",
+					"JUCE_APP_VERSION=1.1.0",
+					"JUCE_APP_VERSION_HEX=0x10100",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=1",
+					"JucePlugin_Build_AU=1",
+					"JucePlugin_Build_AUv3=0",
+					"JucePlugin_Build_RTAS=0",
+					"JucePlugin_Build_AAX=0",
+					"JucePlugin_Build_Standalone=0",
+					"JucePlugin_Build_Unity=0",
+					"JUCE_DISPLAY_SPLASH_SCREEN=1",
+					"JUCE_USE_DARK_SPLASH_SCREEN=1",
+					"JUCE_PROJUCER_VERSION=0x60004",
+					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_processors=1",
+					"JUCE_MODULE_AVAILABLE_juce_audio_utils=1",
+					"JUCE_MODULE_AVAILABLE_juce_core=1",
+					"JUCE_MODULE_AVAILABLE_juce_data_structures=1",
+					"JUCE_MODULE_AVAILABLE_juce_events=1",
+					"JUCE_MODULE_AVAILABLE_juce_graphics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_basics=1",
+					"JUCE_MODULE_AVAILABLE_juce_gui_extra=1",
+					"JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1",
+					"JUCE_VST3_CAN_REPLACE_VST2=0",
+					"JUCE_STRICT_REFCOUNTEDPOINTER=1",
+					"JucePlugin_Enable_IAA=0",
+					"JucePlugin_Name=\\\"ComposeSiren\\\"",
+					"JucePlugin_Desc=\\\"ComposeSiren\\\"",
+					"JucePlugin_Manufacturer=\\\"MecaniqueVivante\\\"",
+					"JucePlugin_ManufacturerWebsite=\\\"https://www.mecanique-vivante.com\\\"",
+					"JucePlugin_ManufacturerEmail=\\\"\\\"",
+					"JucePlugin_ManufacturerCode=0x4d616e75",
+					"JucePlugin_PluginCode=0x4b6b6238",
+					"JucePlugin_IsSynth=1",
+					"JucePlugin_WantsMidiInput=1",
+					"JucePlugin_ProducesMidiOutput=0",
+					"JucePlugin_IsMidiEffect=0",
+					"JucePlugin_EditorRequiresKeyboardFocus=0",
+					"JucePlugin_Version=1.1.0",
+					"JucePlugin_VersionCode=0x10100",
+					"JucePlugin_VersionString=\\\"1.1.0\\\"",
+					"JucePlugin_VSTUniqueID=JucePlugin_PluginCode",
+					"JucePlugin_VSTCategory=kPlugCategSynth",
+					"JucePlugin_Vst3Category=\\\"Instrument|Synth\\\"",
+					"JucePlugin_AUMainType='aumu'",
+					"JucePlugin_AUSubType=JucePlugin_PluginCode",
+					"JucePlugin_AUExportPrefix=ComposeSirenAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"ComposeSirenAU\\\"",
+					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_CFBundleIdentifier=com.MecaniqueVivante.ComposeSiren",
+					"JucePlugin_RTASCategory=2048",
+					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
+					"JucePlugin_RTASDisableBypass=0",
+					"JucePlugin_RTASDisableMultiMono=0",
+					"JucePlugin_AAXIdentifier=com.MecaniqueVivante.ComposeSiren",
+					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
+					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
+					"JucePlugin_AAXCategory=2048",
+					"JucePlugin_AAXDisableBypass=0",
+					"JucePlugin_AAXDisableMultiMono=0",
+					"JucePlugin_IAAType=0x61757269",
+					"JucePlugin_IAASubType=JucePlugin_PluginCode",
+					"JucePlugin_IAAName=\\\"MecaniqueVivante:\\ ComposeSiren\\\"",
+					"JucePlugin_VSTNumMidiInputs=16",
+					"JucePlugin_VSTNumMidiOutputs=16",
+					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"../../JuceLibraryCode",
+					"$(HOME)/JUCE/modules",
+					"/usr/local/Cellar/boost/1.72.0_3/include",
+					"$(HOME)/JUCE/modules/juce_audio_plugin_client",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Info-AU.plist;
+				INFOPLIST_PREPROCESS = NO;
+				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/Components/";
+				LIBRARY_STYLE = Bundle;
+				LLVM_LTO = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_HEADER_SEARCH_PATHS = (
+					"$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
+					"../../JuceLibraryCode",
+					"$(HOME)/JUCE/modules",
+					"/usr/local/Cellar/boost/1.72.0_3/include",
+					"$(HOME)/JUCE/modules/juce_audio_plugin_client",
+				);
+				OTHER_LDFLAGS = "-bundle -lComposeSiren";
+				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
+				PRODUCT_BUNDLE_IDENTIFIER = com.MecaniqueVivante.ComposeSiren;
+				PRODUCT_NAME = "ComposeSiren";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
+				WRAPPER_EXTENSION = component;
+			};
+			name = Release;
+		};
 		73532CC611299466C9C9EC26 = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1209,7 +1520,7 @@
 					"JUCE_APP_VERSION_HEX=0x10100",
 					"JucePlugin_Build_VST=0",
 					"JucePlugin_Build_VST3=1",
-					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AU=1",
 					"JucePlugin_Build_AUv3=0",
 					"JucePlugin_Build_RTAS=0",
 					"JucePlugin_Build_AAX=0",
@@ -1323,7 +1634,7 @@
 					"JUCE_APP_VERSION_HEX=0x10100",
 					"JucePlugin_Build_VST=0",
 					"JucePlugin_Build_VST3=1",
-					"JucePlugin_Build_AU=0",
+					"JucePlugin_Build_AU=1",
 					"JucePlugin_Build_AUv3=0",
 					"JucePlugin_Build_RTAS=0",
 					"JucePlugin_Build_AAX=0",
@@ -1540,6 +1851,7 @@
 			buildRules = ( );
 			dependencies = (
 				B30770BB40115DA99E272184,
+				1EB215D57D98342F4C705878,
 				208C7A18BAA7559434671965,
 			);
 			name = "ComposeSiren - All";
@@ -1580,8 +1892,6 @@
 				84319751E405A7A6E48417E8,
 				59F1440083ED09C4B4FF410E,
 				C3204B66F21C6389A21720D6,
-				A4679F1B9EFEBCB62DDF0D8D,
-				55DC0E78C0B241BFDCA5E055,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1626,6 +1936,98 @@
 			name = "ComposeSiren - VST3";
 			productName = ComposeSiren;
 			productReference = 2A308593FDB04D974DE2C5A3;
+			productType = "com.apple.product-type.bundle";
+		};
+		A7771BEF285284931CD17C9B = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D28BF68EAEDE7CD7F35C4218,
+				DED9D7441133FF5FC685A2C3,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7F822CD57B72E2E4816D7BE9 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA14C6605E95C25A2F0C1002,
+				A283D018E8EBBF563E1F7DE9,
+				D2824E38811D4FEB6594306F,
+				B15E701608D9A13414FB2C86,
+				81152497C90CD99F43AA9523,
+				F6E444D09265A2B95AF5EAB8,
+				3FE6C6AE06C417825D7AB491,
+				960603F8D2EE513AA44BC1B8,
+				A254802E9436A787F169E76B,
+				C56BFF7EC1A94CEFB5EED6BE,
+				005CF046B56BA553986192D0,
+				0CD6166E9C7E411277A738B6,
+				70490E0356D409E72A6A84D5,
+				437C4F92AB038A185CC0AA43,
+				DB9A096A17584FBD790B9824,
+				83C9DA800199801BA965E73A,
+				74C7417B1FEA6E70D72088B9,
+				7F95BD29A4C88099161FC582,
+				7B16A8A2E9E2F3DA545F3A7E,
+				84319751E405A7A6E48417E8,
+				59F1440083ED09C4B4FF410E,
+				C3204B66F21C6389A21720D6,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A30635BD59B9FC3BE609681 = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBEF721EB9D54549C3D093B2,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9369F36FC22E99D198FA47AC = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B59FCD256E46137D9F14B1C7,
+				DBA6F431A527817E214F4C88,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F20EBC990BE1F6EA7CC9D12 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCFBF5BC73654E9DE432A55,
+				582855257A165E2B7DA50046,
+				978F16A783A681A09C365DC2,
+				AB9F45A9F3B8CCA4513DA72C,
+				1E23A7EFDFD9F2FFF7CDB056,
+				DD7628442311DEF48B406150,
+				767748B1435F4FA15613A075,
+				CB123B6D67AE1C1E81A316DB,
+				04E8958FC997EA11E2CC31B8,
+				B60A60F64211B2CB0BD04695,
+				DEE9CB0477A12C1EE3E3FE10,
+				993028C5ECCA46FD5CE37F66,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFC3A730D1B407259A1FE875 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7771BEF285284931CD17C9B;
+			buildPhases = (
+				7F822CD57B72E2E4816D7BE9,
+				0A30635BD59B9FC3BE609681,
+				9369F36FC22E99D198FA47AC,
+				7F20EBC990BE1F6EA7CC9D12,
+			);
+			buildRules = ( );
+			dependencies = (
+				AC99727FE08FA665300BDBC5,
+			);
+			name = "ComposeSiren - AU";
+			productName = ComposeSiren;
+			productReference = E1683FFDF0E3EAA8242C3A84;
 			productType = "com.apple.product-type.bundle";
 		};
 		F60C4B8DAB0CE5DC3C41AAF6 = {
@@ -1679,13 +2081,13 @@
 		FA0E6FAB9D347EBA8AF9D6C0 = {
 			isa = PBXProject;
 			buildConfigurationList = E4F6EF7043C4B2416174536F;
-			attributes = { LastUpgradeCheck = 1200; ORGANIZATIONNAME = "MecaniqueVivante"; TargetAttributes = { 033715CA32259FA5FB4971F1 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };687B1153C3117F62B39A021C = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };108DBA77A4D71E8F133BF81A = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; }; }; };
+			attributes = { LastUpgradeCheck = 1200; ORGANIZATIONNAME = "MecaniqueVivante"; TargetAttributes = { 033715CA32259FA5FB4971F1 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };687B1153C3117F62B39A021C = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };FFC3A730D1B407259A1FE875 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };108DBA77A4D71E8F133BF81A = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; }; }; };
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
 			mainGroup = 082EFAEE9F45D49F42D36DC3;
 			projectDirPath = "";
 			projectRoot = "";
-			targets = (033715CA32259FA5FB4971F1, 687B1153C3117F62B39A021C, 108DBA77A4D71E8F133BF81A);
+			targets = (033715CA32259FA5FB4971F1, 687B1153C3117F62B39A021C, FFC3A730D1B407259A1FE875, 108DBA77A4D71E8F133BF81A);
 			knownRegions = (en, Base);
 		};
 	};

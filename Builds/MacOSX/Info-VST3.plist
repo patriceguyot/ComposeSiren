@@ -8,19 +8,19 @@
     <key>CFBundleIconFile</key>
     <string></string>
     <key>CFBundleIdentifier</key>
-    <string>com.MecaniqueVivante.SirenePlug</string>
+    <string>com.MecaniqueVivante.ComposeSiren</string>
     <key>CFBundleName</key>
-    <string>SirenePlug</string>
+    <string>ComposeSiren</string>
     <key>CFBundleDisplayName</key>
-    <string>SirenePlug</string>
+    <string>ComposeSiren</string>
     <key>CFBundlePackageType</key>
     <string>BNDL</string>
     <key>CFBundleSignature</key>
     <string>????</string>
     <key>CFBundleShortVersionString</key>
-    <string>1.0.0</string>
+    <string>1.1.0</string>
     <key>CFBundleVersion</key>
-    <string>1.0.0</string>
+    <string>1.1.0</string>
     <key>NSHumanReadableCopyright</key>
     <string></string>
     <key>NSHighResolutionCapable</key>

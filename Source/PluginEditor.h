@@ -36,7 +36,7 @@ private:
 class MainCommandsComponent   : public juce::Component
 {
 public:
-    MainCommandsComponent();
+    MainCommandsComponent(SirenePlugAudioProcessor&);
     ~MainCommandsComponent();
 
     void paint (juce::Graphics&) override;
@@ -45,6 +45,7 @@ public:
     juce::TextButton resetButton;
 
 private:
+    SirenePlugAudioProcessor& audioProcessor;
     
    
     
@@ -53,7 +54,7 @@ private:
 //==============================================================================
 
 
-class SirenePlugAudioProcessorEditor  : public juce::AudioProcessorEditor, public juce::Button::Listener
+class SirenePlugAudioProcessorEditor  : public juce::AudioProcessorEditor//, public juce::Button::Listener
 
 {
 public:
@@ -75,6 +76,7 @@ private:
     headComponent head;
     MainCommandsComponent mainCommands;
     
+    /*
     void buttonClicked (juce::Button* button) override
     {
         //juce::String buttonName = button->getComponentID();
@@ -92,6 +94,7 @@ private:
 
         }
     }
+     */
 
     //JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SirenePlugAudioProcessorEditor)
 };

@@ -47,16 +47,13 @@ void headComponent::resized()
 
 //==============================================================================
 // Component on the top of the main window
-MainCommandsComponent::MainCommandsComponent()
+MainCommandsComponent::MainCommandsComponent(SirenePlugAudioProcessor& p)
+    :audioProcessor(p)
 {
-    addAndMakeVisible (resetButton);
-    
-   
 }
 
 MainCommandsComponent::~MainCommandsComponent()
 {
-
 }
 
 void MainCommandsComponent::paint (juce::Graphics& g)
@@ -71,6 +68,18 @@ void MainCommandsComponent::paint (juce::Graphics& g)
     // resetButton.setColour(juce::TextButton::buttonOnColourId , juce::Colours::grey);
     resetButton.setColour(juce::TextButton::textColourOffId , juce::Colours::black);
     resetButton.setButtonText ("Reset");
+    resetButton.onClick = [this]
+        {
+            std::cout << "Reset"<<std::endl;
+            audioProcessor.myMidiInHandler -> resetSireneCh(1);
+            audioProcessor.myMidiInHandler -> resetSireneCh(2);
+            audioProcessor.myMidiInHandler -> resetSireneCh(3);
+            audioProcessor.myMidiInHandler -> resetSireneCh(4);
+            audioProcessor.myMidiInHandler -> resetSireneCh(5);
+            audioProcessor.myMidiInHandler -> resetSireneCh(6);
+            audioProcessor.myMidiInHandler -> resetSireneCh(7);
+        };
+    addAndMakeVisible (resetButton);
     //resetButton.setFont (juce::Font (14.0f, juce::Font::bold)); // no set font for textbutton :-(
     //resetButton.setColour(juce::Label::textColourId, juce::Colours::black);
     
@@ -91,13 +100,16 @@ void MainCommandsComponent::resized()
 
 //==============================================================================
 SirenePlugAudioProcessorEditor::SirenePlugAudioProcessorEditor (SirenePlugAudioProcessor& p)
-    : AudioProcessorEditor (&p), audioProcessor (p)
+    : AudioProcessorEditor (&p), audioProcessor (p), mainCommands(audioProcessor)
 {
+    
+    //mainCommands = new MainCommandsComponent(audioProcessor);
     
     setSize (300, 200);
     addAndMakeVisible (head);
+    
     addAndMakeVisible (mainCommands);
-    mainCommands.resetButton.addListener(this);
+    //mainCommands.resetButton.addListener(this);
 
 
 
@@ -106,7 +118,7 @@ SirenePlugAudioProcessorEditor::SirenePlugAudioProcessorEditor (SirenePlugAudioP
 
 SirenePlugAudioProcessorEditor::~SirenePlugAudioProcessorEditor()
 {
-    mainCommands.resetButton.removeListener(this);
+    //mainCommands.resetButton.removeListener(this);
 }
 
 //==============================================================================
