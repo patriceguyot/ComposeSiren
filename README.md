@@ -1,6 +1,6 @@
 # ComposeSiren
 
-ComposeSiren is a vst3 plugin that synthesize sounds of sirens made by the [Mécanique Vivante][1] company.
+ComposeSiren is a plugin that synthesize sounds of sirens made by the [Mécanique Vivante][1] company.
 
 The plugin allows to handle the seven-piece Siren Orchestra:
 - a piccolo,
@@ -9,6 +9,8 @@ The plugin allows to handle the seven-piece Siren Orchestra:
 - a tenor
 - and a bass.
 
+It is currently available on two formats: VST3 and Audio Unit.
+
 
 
 
@@ -16,21 +18,27 @@ The plugin allows to handle the seven-piece Siren Orchestra:
 
 ComposeSiren is developed on top of the **JUCE** frameworks. You can find more infos about it there: http://www.juce.com.
 
-ComposeSiren is currently built on macOS as a 64-bit VST3, and currently tested on [Ableton Live][4].
+ComposeSiren is built on macOS as a 64-bit VST3 and Audio Unit formats, and currently tested on [Ableton Live][4].
 
 ### Using the plugin
 
 
-The plugin file, called **ComposeSiren.vst3**, is located in the folder: *builds/MacOSX/*.
+The vst3 plugin file called **ComposeSiren.vst3**, and the Audio Unit plugin file called **ComposeSiren.component** are located in the folder: *builds/MacOSX/*.
 
-You can **download the plugin directly** with this [link][2].
+
+
+You can **download the vst3 plugin directly** with this [link][2].
+You can **download the Audio Unit plugin directly** with this [link][5].
+
+
 
 You'll find [here][3] more info on how to use the plugin with Ableton Live.
 
 
 ### Version history:
+- 1.2.0 - Audio Unit format added
 - 1.1.0 - Improved GUI
-- 1.0.0 - First version of the plugin
+- 1.0.0 - First version of the vst3 plugin
 
 
 
@@ -38,3 +46,4 @@ You'll find [here][3] more info on how to use the plugin with Ableton Live.
 [2]: https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/patriceguyot/ComposeSiren/tree/master/Builds/MacOSX/ComposeSiren.vst3
 [3]: https://help.ableton.com/hc/en-us/sections/202295165-Plug-Ins
 [4]: https://www.ableton.com/en/live/
+[5]: https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/patriceguyot/ComposeSiren/tree/master/Builds/MacOSX/ComposeSiren.component
