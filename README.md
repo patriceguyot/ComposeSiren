@@ -1,6 +1,6 @@
 # ComposeSiren
 
-ComposeSiren is a plugin that synthesize sounds of sirens made by the [Mécanique Vivante][1] company.
+ComposeSiren is a plugin that synthesize sounds of sirens made by [Mécanique Vivante][1].
 
 The plugin allows to handle the seven-piece Siren Orchestra:
 - a piccolo,
@@ -33,7 +33,7 @@ You can **download the Audio Unit plugin directly** with this [link][5].
 
 
 
-You'll find [here][3] more info on how to use the plugin with Ableton Live.
+You'll find [here][3] more info on how to use the plugins with Ableton Live.
 
 
 ### Version history:
