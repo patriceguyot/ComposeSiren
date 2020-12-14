@@ -31,6 +31,8 @@ Synth::Synth(){
     //mIntervalFromAudio=512/44100;
     //ICI TOUT LE TRUC DE OBJECTIVE C
     //fOnOffReverbe=true;
+    
+    // left channel
     PanS1=0.75;
     PanS2=0.25;
     PanS3=0.6;
@@ -38,6 +40,7 @@ Synth::Synth(){
     PanS5=0.9;
     PanS6=0.1;
     PanS7=0.45;
+    
     //muteS1=false;
     isWithSynthe=true;
     isWithClic=false;
@@ -138,14 +141,14 @@ float Synth::getPan(int sireneNumber, int channel)
     if(channel){
         // right channel
         switch (sireneNumber) {
-            case 1: return 1-PanS1;  break;
-            case 2: return 1-PanS2;  break;
-            case 3: return 1-PanS3;  break;
-            case 4: return 1-PanS4;  break;
-            case 5: return 1-PanS5;  break;
-            case 6: return 1-PanS6;  break;
-            case 7: return 1-PanS7;  break;
-            default:  return 0;
+            case 1: return 1-PanS1 + 0.5;  break;
+            case 2: return 1-PanS2+ 0.5;  break;
+            case 3: return 1-PanS3+ 0.5;  break;
+            case 4: return 1-PanS4+ 0.5;  break;
+            case 5: return 1-PanS5+ 0.5;  break;
+            case 6: return 1-PanS6+ 0.5;  break;
+            case 7: return 1-PanS7+ 0.5;  break;
+            default:  return 0.5;
         }
     }
     else
@@ -153,14 +156,14 @@ float Synth::getPan(int sireneNumber, int channel)
         // left channel
 
         switch (sireneNumber) {
-            case 1: return PanS1;  break;
-            case 2: return PanS2;  break;
-            case 3: return PanS3;  break;
-            case 4: return PanS4;  break;
-            case 5: return PanS5;  break;
-            case 6: return PanS6;  break;
-            case 7: return PanS7;  break;
-            default:  return 0;
+            case 1: return PanS1+ 0.5;  break;
+            case 2: return PanS2+ 0.5;  break;
+            case 3: return PanS3+ 0.5;  break;
+            case 4: return PanS4+ 0.5;  break;
+            case 5: return PanS5+ 0.5;  break;
+            case 6: return PanS6+ 0.5;  break;
+            case 7: return PanS7+ 0.5;  break;
+            default:  return 0.5;
         
     }
     }

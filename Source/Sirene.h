@@ -64,16 +64,11 @@ public:
         //std::cout << "Je suis la 1" << std::endl;
         float wavefinal=0.;
 
-        //std::cout << "Je suis la 5" << std::endl;
-
         isChangementdenote=false;
-        //std::cout << "Je suis la 6" << std::endl;
 
         if (! (noteInf == ancienNoteVoulue))
         {
-            //std::cout << "Je suis la 2" << std::endl;
             isChangementdenote=true;
-            //std::cout << "isChangementdenote\n" << std::endl;
             ancienNoteVoulue=noteInf;
         }
 
@@ -189,13 +184,13 @@ private:
     bool boutonveloONS1;
     bool isCrossfade;
 
-		// Pat added ------------------
-		std::string name;
-		int noteMidiCentMax;
-		int noteMin;
-		int pourcentClapetOff;
-		int noteEncourMax;
-		int coeffPicolo;
+    // Pat added ------------------
+    std::string name;
+	int noteMidiCentMax;
+	int noteMin;
+	int pourcentClapetOff;
+	int noteEncourMax;
+	int coeffPicolo;
 };
 
 
