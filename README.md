@@ -37,7 +37,7 @@ You'll find [here][3] more info on how to use the plugins with Ableton Live.
 
 
 ### Version history:
-- 1.3.0 - Change default panning
+- 1.3.0 - Change default panning and volume
 - 1.2.0 - Audio Unit format added
 - 1.1.0 - Improved GUI
 - 1.0.0 - First version of the vst3 plugin
