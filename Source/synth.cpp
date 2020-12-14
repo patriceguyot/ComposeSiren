@@ -31,14 +31,13 @@ Synth::Synth(){
     //mIntervalFromAudio=512/44100;
     //ICI TOUT LE TRUC DE OBJECTIVE C
     //fOnOffReverbe=true;
-    //PanS1=0.75;
-    PanS1=0.25;
-    PanS2=0.75;
-    PanS3=0.4;
-    PanS4=0.6;
-    PanS5=0.1;
-    PanS6=0.9;
-    PanS7=0.65;
+    PanS1=0.75;
+    PanS2=0.25;
+    PanS3=0.6;
+    PanS4=0.4;
+    PanS5=0.9;
+    PanS6=0.1;
+    PanS7=0.45;
     //muteS1=false;
     isWithSynthe=true;
     isWithClic=false;
