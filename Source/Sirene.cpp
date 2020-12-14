@@ -86,15 +86,15 @@ Sirene::Sirene(const std::string& str): name(str)
     else if (name=="S6") {noteMidiCentMax=7900; pourcentClapetOff=7; noteMin=36; coeffPicolo=1.;}
     else if (name=="S7") {noteMidiCentMax=7900; pourcentClapetOff=7; noteMin=36; coeffPicolo=2.;}
 
-	  vitesseClape=0.0002;
+    vitesseClape=0.0002;
     countKInf=0;
     countKSup=0;
     midiCentVoulue=0;
     ancienNoteVoulue=0;
     qualite=30;
-		//qualite = 10;
+    //qualite = 10;
 
-		anciennewaveInf=0.;
+    anciennewaveInf=0.;
     eloignementfreq=0;
     noteInf=0;
     noteSup=0;

@@ -4,7 +4,7 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" pluginFormats="buildAU,buildVST3"
               pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
               companyName="MecaniqueVivante" companyWebsite="https://www.mecanique-vivante.com"
-              displaySplashScreen="1" version="1.2.0">
+              displaySplashScreen="1" version="1.3.0">
   <MAINGROUP id="UbOsgL" name="ComposeSiren">
     <GROUP id="{5D8B4C35-3DE3-3DFE-C48F-E72EDC6982BD}" name="Resources">
       <FILE id="GQdGLI" name="dataAmpS1" compile="0" resource="0" file="Resources/dataAmpS1"
