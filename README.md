@@ -3,11 +3,11 @@
 ComposeSiren is an audio plugin that synthesize sounds of sirens made by [Mécanique Vivante][1].
 
 The plugin allows to handle the seven-piece Siren Orchestra:
-- a piccolo,
-- two sopranos,
-- two altos,
-- a tenor
-- and a bass.
+- a piccolo (called S7),
+- two sopranos (called S5 and S6),
+- two altos (called S1 and S2),
+- a tenor (called S4),
+- and a bass (called S3).
 
 It is currently available on two formats: VST3 and Audio Unit.
 
